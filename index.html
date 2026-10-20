@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script>
+      // Ensure window.fetch has both a getter and setter so browser extensions and interceptors can wrap it without throwing
+      (function() {
+        try {
+          var _f = typeof window.fetch === 'function' ? window.fetch.bind(window) : window.fetch;
+          var descriptor = {
+            get: function() {
+              return _f;
+            },
+            set: function(val) {
+              _f = val;
+            },
+            configurable: true,
+            enumerable: true
+          };
+          try {
+            Object.defineProperty(window, 'fetch', descriptor);
+          } catch (e1) {}
+          if (typeof Window !== 'undefined' && Window.prototype) {
+            try {
+              Object.defineProperty(Window.prototype, 'fetch', descriptor);
+            } catch (e2) {}
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <title>SkillSpill - Cozy Community Skill Sharing</title>
+    <meta name="description" content="Share your skills, lend a hand, and grow together in your local neighborhood with shared family wallets and community quests." />
+    <meta property="og:title" content="SkillSpill - Cozy Community Skill Sharing" />
+    <meta property="og:description" content="Share your skills, lend a hand, and grow together in your local neighborhood with shared family wallets and community quests." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Fredoka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Material Symbols Outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#f0ece4] text-[#1a1c1c] antialiased min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

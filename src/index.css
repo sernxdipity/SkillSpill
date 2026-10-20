@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@theme {
+  --color-primary: #5d3e22;
+  --color-primary-container: #775537;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #facca6;
+  --color-primary-fixed: #ffdcc1;
+  --color-primary-fixed-dim: #ebbe99;
+  --color-secondary: #6e5d25;
+  --color-secondary-container: #fae19c;
+  --color-secondary-fixed: #fae19c;
+  --color-secondary-fixed-dim: #dcc582;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #75632b;
+  --color-tertiary: #2f4947;
+  --color-tertiary-container: #46615f;
+  --color-tertiary-fixed: #cbe8e5;
+  --color-tertiary-fixed-dim: #afccc9;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #bedbd8;
+  --color-surface: #f9f9f9;
+  --color-background: #f9f9f9;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #50453c;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container-highest: #e2e2e2;
+  --color-surface-variant: #e2e2e2;
+  --color-surface-dim: #dadada;
+  --color-surface-bright: #f9f9f9;
+  --color-outline: #82756b;
+  --color-outline-variant: #d3c4b9;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+}
+
+.font-display {
+  font-family: 'Fredoka', 'Plus Jakarta Sans', cursive, sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.material-symbols-outlined.fill-1,
+.material-symbols-outlined.fill,
+.material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Storybook Paper & Sticker Shadows */
+.paper-shadow {
+  box-shadow: 0 4px 0 rgba(119, 85, 55, 0.08);
+}
+
+.paper-stamp-shadow {
+  box-shadow: 0px 4px 0px rgba(119, 85, 55, 0.12);
+}
+
+.paper-button-shadow {
+  box-shadow: 0px 3px 0px #5f4024;
+}
+
+.sticker-shadow {
+  box-shadow: 0px 4px 0px rgba(119, 85, 55, 0.12);
+}
+
+.sticker-shadow-sm {
+  box-shadow: 0px 2px 0px rgba(119, 85, 55, 0.08);
+}
+
+.sticker-btn-shadow {
+  box-shadow: 0 3px 0 rgba(119, 85, 55, 0.16);
+}
+
+/* Hide scrollbars smoothly */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Ambient Sparkle Animations */
+@keyframes sparkleFloat {
+  0%, 100% { transform: translateY(0px) scale(1) rotate(0deg); opacity: 0.9; }
+  50% { transform: translateY(-4px) scale(1.08) rotate(8deg); opacity: 1; }
+}
+
+.sparkle-anim-1 {
+  animation: sparkleFloat 3.2s ease-in-out infinite;
+}
+
+.sparkle-anim-2 {
+  animation: sparkleFloat 2.6s ease-in-out infinite 0.7s;
+}
+
+.sparkle-anim-3 {
+  animation: sparkleFloat 3.5s ease-in-out infinite 1.3s;
+}

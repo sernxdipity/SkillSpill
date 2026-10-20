@@ -1,0 +1,8 @@
+{
+  "name": "Remix SkillSpill - Cozy Community Skill Sharing",
+  "description": "Share your skills, lend a hand, and grow together in your local neighborhood with shared family wallets and community quests.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
